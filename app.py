@@ -1,6 +1,7 @@
 from modules.task_list import *
 from modules.output import *
 from data.task_list import *
+from modules.input import *
 
 while (True):
     print_menu()
@@ -19,14 +20,14 @@ while (True):
         if task != "Task Not Found":
             mark_task_complete(task)
     elif option == '5':
-        time = int(input.task_duration()
+        time = int(input.task_duration())
         print_list(get_tasks_taking_longer_than(tasks, time))
     elif option == '6':
         description = input.task_description()
         print(get_task_with_description(tasks, description))
     elif option == '7':
         description = input.task_description()
-        time_taken = int(input.task_duration()
+        time_taken = int(input.task_duration())
         task = create_task(description, time_taken)
         tasks.append(task)
     else:
